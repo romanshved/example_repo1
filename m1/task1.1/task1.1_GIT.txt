@@ -1,0 +1,16 @@
+fd9d2b2 HEAD@{0}: merge develop: Fast-forward
+5f3ccdf HEAD@{1}: checkout: moving from develop to main
+fd9d2b2 HEAD@{2}: commit (merge): resolved conflict in index.html
+7d7f95a HEAD@{3}: merge images: Fast-forward
+2c4f8a2 HEAD@{4}: checkout: moving from styles to develop
+6bde39c HEAD@{5}: commit: changed index.html
+ecb8f41 HEAD@{6}: commit: added styles
+2c4f8a2 HEAD@{7}: checkout: moving from develop to styles
+2c4f8a2 HEAD@{8}: checkout: moving from images to develop
+7d7f95a HEAD@{9}: commit: added images source
+55ce38b HEAD@{10}: commit: added images folder
+2c4f8a2 HEAD@{11}: checkout: moving from develop to images
+2c4f8a2 HEAD@{12}: commit: added index.html
+5f3ccdf HEAD@{13}: checkout: moving from main to develop
+5f3ccdf HEAD@{14}: commit: added readme.txt
+4f80ce0 HEAD@{15}: clone: from https://github.com/romanshved/example_repo1.git
