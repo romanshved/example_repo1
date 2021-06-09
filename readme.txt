@@ -4,11 +4,11 @@ provider "aws" {
 }
 
 data "template_file" "init_jenkins" {
-  template = "${file("${path.module}/template/jenkins.tpl")}"
+  template = "${file("${path.module}/jenkins.tpl")}"
 }
 
 data "template_file" "init_docker" {
-  template = "${file("${path.module}/template/docker.tpl")}"
+  template = "${file("${path.module}/docker.tpl")}"
 }
 
 resource "aws_instance" "jenkins_master" {
@@ -16,7 +16,7 @@ resource "aws_instance" "jenkins_master" {
   instance_type   = "t2.micro"
   key_name        = "virtualBox"
   user_data       = "${data.template_file.init_jenkins.rendered}"
-  security_groups = ["${aws_security_group.sg1.name}"]
+  security_groups = ["${aws_security_group.default.name}"]
     tags = {Name ="jenkins_master"}
 }
 
@@ -25,7 +25,7 @@ resource "aws_instance" "jenkins_slave" {
   instance_type   = "t2.micro"
   key_name        = "virtualBox"
   user_data       = "${data.template_file.init_docker.rendered}"
-  security_groups = ["${aws_security_group.sg1.name}"]
+  security_groups = ["${aws_security_group.default.name}"]
     tags ={Name= "jenkins_slave"}
 }
 
