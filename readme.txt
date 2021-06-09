@@ -29,10 +29,10 @@ resource "aws_instance" "jenkins_slave" {
     tags ={Name= "jenkins_slave"}
 }
 
-resource "aws_security_group" "sg1" {
+resource "aws_security_group" "default" {
   name        = "sg_allow_ssh"
   description = "Allow ssh 22 port"
-  vpc_id      = "vpc-87e2e4ec"
+  vpc_id      = "vpc-c443cbae"
 
   ingress {
     # TLS (change to whatever ports you need)
