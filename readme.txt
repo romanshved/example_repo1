@@ -35,7 +35,7 @@ resource "aws_security_group" "default" {
   vpc_id      = "vpc-c443cbae"
 
   ingress {
-    # TLS (change to whatever ports you need)
+    # TLS (change to whatever ports you neeed)
     from_port = 22
     to_port   = 22
     protocol  = "tcp"
