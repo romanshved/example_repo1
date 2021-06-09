@@ -12,7 +12,7 @@ data "template_file" "init_docker" {
 }
 
 resource "aws_instance" "jenkins_master" {
-  ami             = "ami-0bdf93799014acdc4"
+  ami             = "ami-08f11f4114f566d1a"
   instance_type   = "t2.micro"
   key_name        = "virtualBox"
   user_data       = "${data.template_file.init_jenkins.rendered}"
@@ -21,7 +21,7 @@ resource "aws_instance" "jenkins_master" {
 }
 
 resource "aws_instance" "jenkins_slave" {
-  ami             = "ami-0bdf93799014acdc4"
+  ami             = "ami-08f11f4114f566d1a"
   instance_type   = "t2.micro"
   key_name        = "virtualBox"
   user_data       = "${data.template_file.init_docker.rendered}"
