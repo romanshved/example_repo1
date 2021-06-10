@@ -41,7 +41,7 @@ resource "aws_security_group" "default" {
     protocol  = "tcp"
 
     # Please restrict your ingress to only necessary IPs and ports.
-    # Opening to 0.0.0.0/0 can lead to security vulnerabilities.
+    # Opeining to 0.0.0.0/0 can lead to security vulnerabilities.
     cidr_blocks = ["0.0.0.0/0"] # add a CIDR block here
   }
 
